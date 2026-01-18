@@ -3,82 +3,371 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Peter Zalar - Materials and Device Engineer specializing in organic electronics, printed sensors, and flexible electronics. Ph.D. in Chemistry from UC Santa Barbara with 36 publications and 14 patents." />
   <title>Peter Zalar</title>
   <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Peter Zalar",
+    "alumniOf": {
+      "@type": "EducationalOrganization",
+      "name": "University of California, Santa Barbara"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Cupertino",
+      "addressRegion": "CA",
+      "addressCountry": "USA"
+    },
+    "sameAs": [
+      "https://scholar.google.com/citations?user=Sfoouv0AAAAJ",
+      "https://www.linkedin.com/in/peterzalar/",
+      "https://x.com/peter_zalar"
+    ],
+    "knowsAbout": [
+      "Organic Electronics",
+      "Printed Sensors",
+      "Flexible Electronics",
+      "OLEDs",
+      "Wearable Devices",
+      "Materials Science"
+    ]
+  }
+  </script>
   <style>
+    /* CSS Custom Properties */
+    :root {
+      /* Colors - Backgrounds */
+      --bg-primary: #0a0a0a;
+      --bg-secondary: #151515;
+      --bg-tertiary: #1a1a1a;
+
+      /* Colors - Text */
+      --text-primary: #f5f5f5;
+      --text-secondary: #d1d1d1;
+      --text-tertiary: #9a9a9a;
+
+      /* Colors - Accents */
+      --accent-primary: #4a9eff;
+      --accent-hover: #6bb1ff;
+
+      /* Colors - Borders */
+      --border-subtle: #252525;
+      --border-medium: #303030;
+      --border-accent: #3a3a3a;
+
+      /* Spacing */
+      --space-4: 1rem;
+      --space-6: 1.5rem;
+      --space-8: 2rem;
+      --space-12: 3rem;
+      --space-16: 4rem;
+
+      /* Border Radius */
+      --radius-md: 8px;
+      --radius-lg: 12px;
+      --radius-full: 9999px;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-      background-color: #0f0f0f;
-      color: #e4e4e4;
+      background-color: var(--bg-primary);
+      color: var(--text-secondary);
       text-align: center;
-      padding: 2rem;
+      padding: var(--space-16) var(--space-8);
     }
+
     .header {
       position: absolute;
       top: 1rem;
       right: 1rem;
     }
+
     .header a {
-      color: #ccc;
+      color: var(--text-secondary);
       text-decoration: none;
       padding: 0.5rem 1rem;
-      border: 1px solid #444;
-      border-radius: 5px;
-      font-size: 0.9rem;
+      border: 1px solid var(--border-medium);
+      border-radius: var(--radius-full);
+      font-size: 0.875rem;
+      background: var(--bg-secondary);
+      transition: all 0.3s ease;
     }
+
     .header a:hover {
-      background-color: #222;
-      color: #fff;
+      background-color: var(--bg-tertiary);
+      border-color: var(--accent-primary);
+      color: var(--text-primary);
     }
+
     .container {
       max-width: 800px;
       margin: 0 auto;
     }
+
     img {
       border-radius: 50%;
       width: 150px;
       height: 150px;
       object-fit: cover;
+      border: 4px solid var(--border-medium);
+      box-shadow: 0 8px 24px rgba(74, 158, 255, 0.15), 0 2px 8px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      margin-bottom: var(--space-6);
     }
+
+    img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 12px 32px rgba(74, 158, 255, 0.25), 0 4px 12px rgba(0, 0, 0, 0.4);
+    }
+
     h1 {
-      font-size: 2.5rem;
+      font-size: 2.441rem;
+      font-weight: 700;
+      letter-spacing: -0.025em;
+      line-height: 1.25;
       margin-top: 1rem;
+      color: var(--text-primary);
     }
+
     .subtitle, .location, .contact {
-      color: #999;
-      margin-top: 0.25rem;
-      font-size: 0.95rem;
+      color: var(--text-tertiary);
+      margin-top: 0.5rem;
+      font-size: 0.875rem;
+      letter-spacing: 0.025em;
     }
+
     .links {
       display: flex;
       justify-content: center;
-      gap: 2rem;
-      margin: 1rem 0 2rem;
+      gap: 1rem;
+      margin: var(--space-8) 0 var(--space-16);
       flex-wrap: wrap;
     }
+
     .links a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
       text-decoration: none;
-      color: white;
-      font-size: 1.2rem;
+      color: var(--text-primary);
+      font-size: 1rem;
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-medium);
+      border-radius: var(--radius-full);
+      padding: 0.75rem 1.25rem;
+      transition: all 0.3s ease;
     }
+
+    .links a:hover {
+      background: var(--bg-tertiary);
+      border-color: var(--accent-primary);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(74, 158, 255, 0.2);
+    }
+
     h2 {
-      color: white;
-      margin-top: 2rem;
+      color: var(--text-primary);
+      font-size: 1.563rem;
+      font-weight: 600;
+      letter-spacing: 0.025em;
+      line-height: 1.25;
+      margin-top: 0;
+      margin-bottom: var(--space-6);
     }
+
     .section {
       text-align: left;
-      margin-top: 2rem;
+      margin-top: var(--space-16);
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: var(--space-8);
+      transition: border-color 0.3s ease;
     }
-    ul {
-      padding-left: 1.2rem;
+
+    .section:hover {
+      border-color: var(--border-medium);
     }
-    li::marker {
-      color: #ccc;
-    }
+
     .about p {
-      margin: 1rem 0;
-      line-height: 1.6;
+      margin: 1.25rem 0;
+      line-height: 1.625;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin-top: var(--space-6);
+    }
+
+    ul li {
+      padding: 1rem 1.5rem;
+      margin-bottom: 0.75rem;
+      background: var(--bg-tertiary);
+      border-left: 3px solid var(--accent-primary);
+      border-radius: 6px;
+      font-size: 1.125rem;
+      line-height: 1.5;
+      transition: all 0.3s ease;
+      position: relative;
+      padding-left: 2.5rem;
+    }
+
+    ul li::before {
+      content: "▸";
+      color: var(--accent-primary);
+      position: absolute;
+      left: 1rem;
+      font-weight: bold;
+    }
+
+    ul li:hover {
+      background: var(--bg-secondary);
+      border-left-width: 4px;
+      padding-left: 2.75rem;
+    }
+
+    /* Three-column grid container */
+    .expertise-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-top: var(--space-6);
+    }
+
+    .expertise-category {
+      margin-top: 0;
+    }
+
+    .expertise-category h3 {
+      color: var(--text-primary);
+      font-size: 1.125rem;
+      font-weight: 600;
+      margin-bottom: 0.875rem;
+      padding-left: 0.875rem;
+      border-left: 3px solid var(--accent-primary);
+    }
+
+    .expertise-category ul {
+      margin-top: 0;
+    }
+
+    .expertise-category ul li {
+      padding: 0.625rem 1rem;
+      margin-bottom: 0.5rem;
+      background: var(--bg-tertiary);
+      border-left: 2px solid var(--accent-primary);
+      border-radius: 4px;
+      font-size: 0.875rem;
+      line-height: 1.4;
+      transition: all 0.3s ease;
+      position: relative;
+      padding-left: 1.75rem;
+    }
+
+    .expertise-category ul li::before {
+      content: "▸";
+      color: var(--accent-primary);
+      position: absolute;
+      left: 0.625rem;
+      font-weight: bold;
+      font-size: 0.75rem;
+    }
+
+    .expertise-category ul li:hover {
+      background: var(--bg-secondary);
+      border-left-width: 3px;
+      padding-left: 1.875rem;
+    }
+
+    footer {
+      margin-top: var(--space-16);
+      padding: var(--space-8) 0;
+      border-top: 1px solid var(--border-subtle);
+      text-align: center;
+    }
+
+    .footer-content p {
+      color: var(--text-tertiary);
+      font-size: 0.8125rem;
+      margin: 0.25rem 0;
+      line-height: 1.5;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 900px) and (min-width: 641px) {
+      .expertise-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.25rem;
+      }
+    }
+
+    @media (max-width: 640px) {
+      body {
+        padding: var(--space-8) var(--space-4);
+      }
+
+      h1 {
+        font-size: 1.953rem;
+      }
+
+      h2 {
+        font-size: 1.25rem;
+      }
+
+      .links {
+        flex-direction: column;
+        gap: 0.75rem;
+      }
+
+      .section {
+        padding: 1.5rem;
+      }
+
+      .expertise-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+
+      .expertise-category ul li {
+        font-size: 0.875rem;
+        padding: 0.625rem 1rem 0.625rem 1.625rem;
+      }
+
+      .expertise-category ul li::before {
+        left: 0.5rem;
+      }
+
+      .expertise-category ul li:hover {
+        padding-left: 1.75rem;
+      }
+
+      ul li {
+        font-size: 1rem;
+        padding: 0.875rem 1.25rem 0.875rem 2.25rem;
+      }
+
+      ul li::before {
+        left: 0.875rem;
+      }
+
+      ul li:hover {
+        padding-left: 2.5rem;
+      }
+    }
+
+    @media (min-width: 641px) and (max-width: 1024px) {
+      body {
+        padding: var(--space-8) var(--space-6);
+      }
     }
   </style>
 </head>
@@ -116,14 +405,49 @@
 
     <div class="section">
       <h2>Areas of Expertise</h2>
-      <ul>
-        <li>Flexible, stretchable, thin-film electronics</li>
-        <li>Printed electronic devices and circuits</li>
-        <li>Organic semiconductors and organic light-emitting diodes (OLEDs)</li>
-        <li>Wearable sensors for health monitoring</li>
-        <li>Conjugated polymers and functional materials chemistry</li>
-      </ul>
+
+      <div class="expertise-grid">
+        <div class="expertise-category">
+          <h3>Organic & Semiconducting Devices</h3>
+          <ul>
+            <li>Organic semiconductors & conjugated polymers</li>
+            <li>OLEDs & organic optoelectronics</li>
+            <li>Interface engineering & charge transport</li>
+            <li>Ferroelectric & functional ceramics</li>
+            <li>Electrical simulation & characterization</li>
+          </ul>
+        </div>
+
+        <div class="expertise-category">
+          <h3>Flexible, Printed & Wearable Electronics</h3>
+          <ul>
+            <li>Printed sensors & circuits</li>
+            <li>Hybrid/flexible electronics</li>
+            <li>Stretchable opto-electronic systems</li>
+            <li>Sensors for biomedical applications</li>
+            <li>Mechanical simulation & characterization</li>
+          </ul>
+        </div>
+
+        <div class="expertise-category">
+          <h3>Thin-Film Design & Processing</h3>
+          <ul>
+            <li>Thin-film deposition & patterning</li>
+            <li>Cleanroom fabrication</li>
+            <li>Large-area integration</li>
+            <li>Reliability testing</li>
+            <li>Advanced thin-film analysis</li>
+          </ul>
+        </div>
+      </div>
     </div>
   </div>
+
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2026 Peter Zalar</p>
+      <p>Last updated: January 2026</p>
+    </div>
+  </footer>
 </body>
 </html>
