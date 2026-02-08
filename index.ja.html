@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="ピーター・ザーラー - AppleのシニアOLEDデバイスエンジニア。17年の経験、論文37本、特許14件、h-index 24、被引用数5,296。有機エレクトロニクス、印刷センサー、フレキシブルエレクトロニクスの専門家。" />
+  <meta name="description" content="ピーター・ザーラー（Ph.D.）- AppleのシニアOLEDデバイスエンジニア。17年の経験、論文38本、特許14件、h-index 24、被引用数>5,300。有機エレクトロニクス、印刷センサー、フレキシブルエレクトロニクスの専門家。" />
+  <meta name="keywords" content="ピーター・ザーラー, Peter Zalar, OLED, 有機エレクトロニクス, 印刷センサー, フレキシブルエレクトロニクス, 材料科学, Apple, UCSB, 東京大学, ホルストセンター, TNO, ウェアラブルデバイス, 薄膜デバイス, 有機光電子, ディスプレイ技術" />
   <title>ピーター・ザーラー - シニアOLEDデバイスエンジニア</title>
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <link rel="canonical" href="https://www.peterzalar.com/index.ja.html" />
@@ -12,7 +13,7 @@
 
   <!-- Open Graph -->
   <meta property="og:title" content="ピーター・ザーラー - AppleのシニアOLEDデバイスエンジニア" />
-  <meta property="og:description" content="有機エレクトロニクス分野で17年の経験。論文37本、特許14件、h-index 24。OLED、印刷センサー、フレキシブルエレクトロニクスの専門家。" />
+  <meta property="og:description" content="有機エレクトロニクス分野で17年の経験。論文38本、特許14件、h-index 24。OLED、印刷センサー、フレキシブルエレクトロニクスの専門家。" />
   <meta property="og:image" content="https://www.peterzalar.com/peter.jpeg" />
   <meta property="og:url" content="https://www.peterzalar.com/index.ja.html" />
   <meta property="og:type" content="profile" />
@@ -21,7 +22,7 @@
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@peter_zalar" />
   <meta name="twitter:title" content="ピーター・ザーラー - AppleのシニアOLEDデバイスエンジニア" />
-  <meta name="twitter:description" content="有機エレクトロニクス分野で17年の経験。論文37本、特許14件、h-index 24。" />
+  <meta name="twitter:description" content="有機エレクトロニクス分野で17年の経験。論文38本、特許14件、h-index 24。" />
   <meta name="twitter:image" content="https://www.peterzalar.com/peter.jpeg" />
 
   <script type="application/ld+json">
@@ -34,10 +35,16 @@
       "@type": "Organization",
       "name": "Apple"
     },
-    "alumniOf": {
-      "@type": "EducationalOrganization",
-      "name": "University of California, Santa Barbara"
-    },
+    "alumniOf": [
+      {
+        "@type": "EducationalOrganization",
+        "name": "University of California, Santa Barbara"
+      },
+      {
+        "@type": "EducationalOrganization",
+        "name": "University of Tokyo"
+      }
+    ],
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Cupertino",
@@ -55,7 +62,11 @@
       "Flexible Electronics",
       "OLEDs",
       "Wearable Devices",
-      "Materials Science"
+      "Materials Science",
+      "Thin-Film Devices",
+      "Organic Optoelectronics",
+      "Display Technology",
+      "Electrical Characterization"
     ],
     "knowsLanguage": ["en", "ja", "nl", "hr", "it", "es"],
     "hasCredential": {
@@ -137,14 +148,12 @@
       transition: background 0.2s ease; flex-shrink: 0;
     }
     .sticky-nav .nav-cta:hover { background: var(--accent-hover); }
-
-    .header { position: absolute; top: 1rem; right: 1rem; }
-    .header a {
-      color: var(--text-secondary); text-decoration: none; padding: 0.5rem 1rem;
-      border: 1px solid var(--border-medium); border-radius: var(--radius-full);
-      font-size: 0.875rem; background: var(--bg-secondary); transition: all 0.3s ease;
+    .sticky-nav .nav-lang {
+      color: var(--text-tertiary); text-decoration: none; font-size: 1rem;
+      padding: 0.375rem 0.5rem; border-radius: var(--radius-md); flex-shrink: 0;
+      transition: background 0.2s ease;
     }
-    .header a:hover { background-color: var(--bg-tertiary); border-color: var(--accent-primary); color: var(--text-primary); }
+    .sticky-nav .nav-lang:hover { background: var(--bg-tertiary); }
 
     .container { max-width: 800px; margin: 0 auto; }
 
@@ -224,6 +233,7 @@
     .timeline-title { font-size: 1.0625rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.125rem; }
     .timeline-org { font-size: 0.9375rem; color: var(--accent-primary); margin-bottom: 0.125rem; }
     .timeline-location { font-size: 0.8125rem; color: var(--text-tertiary); }
+    .timeline-advisor { font-size: 0.8125rem; color: var(--text-secondary); font-style: italic; }
 
     /* Expertise Grid */
     .expertise-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: var(--space-6); }
@@ -349,7 +359,7 @@
 
     /* Print */
     @media print {
-      .sticky-nav, .header { display: none; }
+      .sticky-nav { display: none; }
       body { background: #fff; color: #222; padding: 1rem; }
       .section { border: 1px solid #ddd; break-inside: avoid; }
       .pub-journal, .badge { border: 1px solid #999; background: transparent; color: #222; }
@@ -397,16 +407,13 @@
         <a href="#presentations">発表</a>
         <a href="#education">学歴</a>
       </div>
+      <a href="index.html" class="nav-lang">&#x1F1FA;&#x1F1F8;</a>
       <a href="https://www.linkedin.com/in/peterzalar/" target="_blank" class="nav-cta">
         <svg stroke="#FFFFFF" fill="#FFFFFF" stroke-width="0" viewBox="0 0 448 512" height="0.875em" width="0.875em" xmlns="http://www.w3.org/2000/svg"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path></svg>
         つながる
       </a>
     </div>
   </nav>
-
-  <div class="header">
-    <a href="index.html">&#x1F1FA;&#x1F1F8; English</a>
-  </div>
 
   <div class="container">
 
@@ -436,20 +443,20 @@
 
     <section id="about" class="section about">
       <h2>自己紹介</h2>
-      <p>私の研究は、材料科学・化学・物理学・電気工学の交差点に位置しています。この組み合わせが、3大陸にわたる17年のキャリアを形作ってきました。現在はAppleのシニア有機ELデバイスエンジニアとして、次世代ディスプレイ製品向けの有機ELの電気モデリング、特性評価、故障解析に取り組んでいます。</p>
-      <p>Apple以前は、オランダのホルストセンター（TNO）で7年間にわたり印刷センサー開発プログラムを主導し、8名の研究チームを管理し、産学連携による国際的な共同研究体制を構築しました。さらに以前は、東京大学JST ERATOプログラムにて、生体医療応用向けの超薄型有機光電子デバイスの開発に携わる機会を得ました。</p>
-      <p>この道のりを通じて、基礎研究から産業応用への技術移転、そして分野や文化を越えたパートナーシップ構築の経験を培ってきました。有機エレクトロニクス、フレキシブルデバイス、センサー技術に関わる研究者、エンジニア、組織との交流を歓迎しています。</p>
+      <p>私のキャリアは、材料科学・化学・物理学・電気工学が交わる分野で、17年間にわたり3つの大陸に広がってきました。現在はAppleでシニア有機ELデバイスエンジニアとして、次世代ディスプレイ向けの有機ELの電気モデリング、特性評価、故障解析に取り組んでいます。</p>
+      <p>Apple以前は、オランダのホルストセンター（TNO）で7年間、大面積印刷センサー開発の研究プログラムを管理し、大学や企業との国際的な共同研究を進めました。さらにその前は、東京大学のJST ERATOプログラムで、医療向けの超薄型有機光電子デバイスの開発に取り組みました。</p>
+      <p>この経験を通じて、基礎研究から産業応用への技術移転や、分野や文化を越えた協力関係の構築について学んできました。有機エレクトロニクス、フレキシブルデバイス、センサー技術に関わる研究者、エンジニア、組織との交流を歓迎しています。</p>
     </section>
 
     <section id="metrics" class="section">
       <h2>研究業績</h2>
       <div class="metrics-grid">
         <div class="metric-card">
-          <span class="metric-number">37</span>
+          <span class="metric-number">38</span>
           <span class="metric-label">論文</span>
         </div>
         <div class="metric-card">
-          <span class="metric-number">5,296</span>
+          <span class="metric-number">&gt;5,300</span>
           <span class="metric-label">被引用数</span>
         </div>
         <div class="metric-card">
@@ -475,33 +482,35 @@
         <div class="timeline-entry">
           <div class="timeline-date">2021年9月 &ndash; 2024年1月</div>
           <div class="timeline-title">リサーチプログラムマネージャー</div>
-          <div class="timeline-org">Holst Centre / TNO</div>
+          <div class="timeline-org">Holst Centre / TNO &mdash; Hybrid Printed Electronics</div>
           <div class="timeline-location">オランダ・アイントホーフェン</div>
         </div>
         <div class="timeline-entry">
           <div class="timeline-date">2017年1月 &ndash; 2021年9月</div>
           <div class="timeline-title">シニアリサーチサイエンティスト</div>
-          <div class="timeline-org">Holst Centre / TNO</div>
+          <div class="timeline-org">Holst Centre / TNO &mdash; Hybrid Printed Electronics</div>
           <div class="timeline-location">オランダ・アイントホーフェン</div>
         </div>
         <div class="timeline-entry">
           <div class="timeline-date">2014年11月 &ndash; 2016年12月</div>
-          <div class="timeline-title">特任研究員</div>
-          <div class="timeline-org">東京大学 &mdash; JST ERATO</div>
+          <div class="timeline-title">特任研究員、JST ERATO</div>
+          <div class="timeline-org">東京大学 &mdash; 電気系工学専攻</div>
           <div class="timeline-location">日本・東京</div>
+          <div class="timeline-advisor">指導教員：染谷 隆夫 教授</div>
         </div>
         <div class="timeline-entry">
           <div class="timeline-date">2010年4月 &ndash; 2014年6月</div>
           <div class="timeline-title">博士課程研究員</div>
-          <div class="timeline-org">カリフォルニア大学サンタバーバラ校</div>
+          <div class="timeline-org">カリフォルニア大学サンタバーバラ校 &mdash; 化学・生化学科</div>
           <div class="timeline-location">アメリカ・カリフォルニア州サンタバーバラ</div>
+          <div class="timeline-advisor">指導教員：Thuc-Quyen Nguyen 教授</div>
         </div>
       </div>
     </section>
 
     <section id="publications" class="section">
       <h2>筆頭著者論文ハイライト</h2>
-      <p class="section-intro"><em>Nature Materials</em>、<em>Nature Communications</em>、<em>Science Advances</em>、<em>JACS</em>、<em>Angewandte Chemie</em>などの学術誌に掲載された査読付き論文37本の中から、筆頭著者論文3本を厳選。</p>
+      <p class="section-intro"><em>Nature Materials</em>、<em>Nature Communications</em>、<em>Science Advances</em>、<em>JACS</em>、<em>Angewandte Chemie</em>などの学術誌に掲載された査読付き論文38本の中から、筆頭著者論文3本を厳選。</p>
       <a href="https://scholar.google.com/citations?user=Sfoouv0AAAAJ&hl=ja" target="_blank" class="section-link"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="vertical-align: -0.125em;"><path d="m12 3-12 7 4.5 2.625v5.375l7.5 4 7.5-4v-5.375l2-1.167v6.542h2v-7.75zm0 14.834-5.5-2.917v-3.459l5.5 3.209 5.5-3.209v3.459z"/></svg> Google Scholarで全論文を見る &rarr;</a>
 
       <div class="pub-card">
@@ -529,8 +538,9 @@
       </div>
 
       <details class="pub-details">
-        <summary>全37本の論文を表示</summary>
+        <summary>全38本の論文を表示</summary>
         <ol class="pub-list" reversed>
+          <li>Ananieva, G.; Spallanzani, G.; Zalar, P.* Influence of Textile Morphology on the Electromechanical Behavior of Silicone-Based Strain Sensors. <em>Adv. Eng. Mater.</em> (2026) <em>Accepted</em> <span class="badge badge-corresponding">Corr.</span></li>
           <li>Cotta, F. C. et al.; Zalar, P. Porous PU/PEDOT:PSS electrodes for probing bioelectricity in Oscillatoria sp. Cohorts. <em>Chem. Eng. J.</em> 498 (2024)</li>
           <li>Zalar, P.* et al. Large Area Ballistocardiography Enabled by Printed Piezoelectric Sensor Arrays on Elastomeric Substrates. <em>Adv. Mater. Technol.</em> 9, 2400228 (2024) <span class="badge badge-first">First</span> <span class="badge badge-corresponding">Corr.</span></li>
           <li>Zalar, P.* et al. A Janus Molecule for Screen-Printable Conductive Carbon Ink with Superior Stretchability. <em>Adv. Eng. Mater.</em> 25, 2300706 (2023) <span class="badge badge-first">First</span> <span class="badge badge-corresponding">Corr.</span></li>
@@ -575,7 +585,7 @@
     <section id="patents" class="section">
       <h2>特許</h2>
       <p class="section-intro">14件の特許ファミリーのうち、登録済み4件。</p>
-      <a href="https://patents.google.com/?inventor=%22Peter+Zalar%22" target="_blank" class="section-link"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="vertical-align: -0.125em;"><path d="m12 3-12 7 4.5 2.625v5.375l7.5 4 7.5-4v-5.375l2-1.167v6.542h2v-7.75zm0 14.834-5.5-2.917v-3.459l5.5 3.209 5.5-3.209v3.459z"/></svg> Google Patentsで全特許を見る &rarr;</a>
+      <a href="https://patents.google.com/?inventor=%22Peter+Zalar%22&sort=new" target="_blank" class="section-link"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="vertical-align: -0.125em;"><path d="m12 3-12 7 4.5 2.625v5.375l7.5 4 7.5-4v-5.375l2-1.167v6.542h2v-7.75zm0 14.834-5.5-2.917v-3.459l5.5 3.209 5.5-3.209v3.459z"/></svg> Google Patentsで全特許を見る &rarr;</a>
 
       <div class="item-card">
         <a href="https://patents.google.com/patent/EP4292106B1" target="_blank" class="item-card-title">Composite Thermistor Element</a>
@@ -702,7 +712,7 @@
         </div>
         <div class="language-badge">
           <span class="language-name">日本語</span>
-          <span class="language-level">JLPT N3 &middot; CEFR B1&ndash;B2</span>
+          <span class="language-level">JLPT N3 &middot; CEFR B2</span>
         </div>
         <div class="language-badge">
           <span class="language-name">オランダ語</span>

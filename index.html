@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Peter Zalar - Senior OLED Device Engineer at Apple with 17 years of experience. 37 publications, 14 patents, h-index 24, 5,296 citations. Expert in organic electronics, printed sensors, and flexible electronics." />
+  <meta name="description" content="Peter Zalar, Ph.D. - Senior OLED Device Engineer at Apple with 17 years of experience. 38 publications, 14 patents, h-index 24, >5,300 citations. Expert in organic electronics, printed sensors, and flexible electronics." />
+  <meta name="keywords" content="Peter Zalar, OLED, organic electronics, printed sensors, flexible electronics, materials science, Apple, UCSB, University of Tokyo, Holst Centre, TNO, wearable devices, thin-film devices, organic optoelectronics, display technology" />
   <title>Peter Zalar - Senior OLED Device Engineer</title>
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <link rel="canonical" href="https://www.peterzalar.com/" />
@@ -12,7 +13,7 @@
 
   <!-- Open Graph -->
   <meta property="og:title" content="Peter Zalar - Senior OLED Device Engineer at Apple" />
-  <meta property="og:description" content="17 years of experience in organic electronics. 37 publications, 14 patents, h-index 24. Expert in OLEDs, printed sensors, and flexible electronics." />
+  <meta property="og:description" content="17 years of experience in organic electronics. 38 publications, 14 patents, h-index 24. Expert in OLEDs, printed sensors, and flexible electronics." />
   <meta property="og:image" content="https://www.peterzalar.com/peter.jpeg" />
   <meta property="og:url" content="https://www.peterzalar.com/" />
   <meta property="og:type" content="profile" />
@@ -21,7 +22,7 @@
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@peter_zalar" />
   <meta name="twitter:title" content="Peter Zalar - Senior OLED Device Engineer at Apple" />
-  <meta name="twitter:description" content="17 years of experience in organic electronics. 37 publications, 14 patents, h-index 24." />
+  <meta name="twitter:description" content="17 years of experience in organic electronics. 38 publications, 14 patents, h-index 24." />
   <meta name="twitter:image" content="https://www.peterzalar.com/peter.jpeg" />
 
   <script type="application/ld+json">
@@ -34,10 +35,16 @@
       "@type": "Organization",
       "name": "Apple"
     },
-    "alumniOf": {
-      "@type": "EducationalOrganization",
-      "name": "University of California, Santa Barbara"
-    },
+    "alumniOf": [
+      {
+        "@type": "EducationalOrganization",
+        "name": "University of California, Santa Barbara"
+      },
+      {
+        "@type": "EducationalOrganization",
+        "name": "University of Tokyo"
+      }
+    ],
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Cupertino",
@@ -55,7 +62,11 @@
       "Flexible Electronics",
       "OLEDs",
       "Wearable Devices",
-      "Materials Science"
+      "Materials Science",
+      "Thin-Film Devices",
+      "Organic Optoelectronics",
+      "Display Technology",
+      "Electrical Characterization"
     ],
     "knowsLanguage": ["en", "ja", "nl", "hr", "it", "es"],
     "hasCredential": {
@@ -137,14 +148,12 @@
       transition: background 0.2s ease; flex-shrink: 0;
     }
     .sticky-nav .nav-cta:hover { background: var(--accent-hover); }
-
-    .header { position: absolute; top: 1rem; right: 1rem; }
-    .header a {
-      color: var(--text-secondary); text-decoration: none; padding: 0.5rem 1rem;
-      border: 1px solid var(--border-medium); border-radius: var(--radius-full);
-      font-size: 0.875rem; background: var(--bg-secondary); transition: all 0.3s ease;
+    .sticky-nav .nav-lang {
+      color: var(--text-tertiary); text-decoration: none; font-size: 1rem;
+      padding: 0.375rem 0.5rem; border-radius: var(--radius-md); flex-shrink: 0;
+      transition: background 0.2s ease;
     }
-    .header a:hover { background-color: var(--bg-tertiary); border-color: var(--accent-primary); color: var(--text-primary); }
+    .sticky-nav .nav-lang:hover { background: var(--bg-tertiary); }
 
     .container { max-width: 800px; margin: 0 auto; }
 
@@ -224,6 +233,7 @@
     .timeline-title { font-size: 1.0625rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.125rem; }
     .timeline-org { font-size: 0.9375rem; color: var(--accent-primary); margin-bottom: 0.125rem; }
     .timeline-location { font-size: 0.8125rem; color: var(--text-tertiary); }
+    .timeline-advisor { font-size: 0.8125rem; color: var(--text-secondary); font-style: italic; }
 
     /* Expertise Grid */
     .expertise-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: var(--space-6); }
@@ -349,7 +359,7 @@
 
     /* Print */
     @media print {
-      .sticky-nav, .header { display: none; }
+      .sticky-nav { display: none; }
       body { background: #fff; color: #222; padding: 1rem; }
       .section { border: 1px solid #ddd; break-inside: avoid; }
       .pub-journal, .badge { border: 1px solid #999; background: transparent; color: #222; }
@@ -391,22 +401,19 @@
     <div class="nav-inner">
       <div class="nav-links">
         <a href="#about">About</a>
-        <a href="#experience">Experience</a>
+        <a href="#experience">Professional Experience</a>
         <a href="#publications">Publications</a>
         <a href="#patents">Patents</a>
         <a href="#presentations">Talks</a>
         <a href="#education">Education</a>
       </div>
+      <a href="index.ja.html" class="nav-lang">&#x1F1EF;&#x1F1F5;</a>
       <a href="https://www.linkedin.com/in/peterzalar/" target="_blank" class="nav-cta">
         <svg stroke="#FFFFFF" fill="#FFFFFF" stroke-width="0" viewBox="0 0 448 512" height="0.875em" width="0.875em" xmlns="http://www.w3.org/2000/svg"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path></svg>
         Connect
       </a>
     </div>
   </nav>
-
-  <div class="header">
-    <a href="index.ja.html">&#x1F1EF;&#x1F1F5; &#x65E5;&#x672C;&#x8A9E;</a>
-  </div>
 
   <div class="container">
 
@@ -436,8 +443,8 @@
 
     <section id="about" class="section about">
       <h2>About</h2>
-      <p>My work lies at the intersection of materials science, chemistry, physics, and electrical engineering &ndash; a combination that has shaped my career over 17 years across three continents. I am currently a Senior OLED Device Engineer at Apple, focused on electrical modeling, characterization, and failure analysis of OLEDs for next-generation display products.</p>
-      <p>Prior to Apple, I spent seven years at Holst Centre / TNO in the Netherlands, where I led programs in printable sensor development, managed an 8-person research team, and built international collaborations across academia and industry. Earlier, at the University of Tokyo, I had the opportunity to develop ultraflexible organic optoelectronics for biomedical applications as part of the JST ERATO program.</p>
+      <p>My career has spanned the intersection of materials science, chemistry, physics, and electrical engineering over 17 years and across three continents. I am currently a Senior OLED Device Engineer at Apple, focused on electrical modeling, characterization, and failure analysis of OLEDs for next-generation display products.</p>
+      <p>Prior to Apple, I spent seven years at Holst Centre / TNO in the Netherlands, where I managed research programs in large-area printed sensor development and built international collaborations across academia and industry. Earlier, at the University of Tokyo, I had the opportunity to develop ultraflexible organic optoelectronics for biomedical applications as part of the JST ERATO program.</p>
       <p>This path has given me experience in translating laboratory concepts to industrial applications, and in building partnerships across disciplines and cultures. I am always open to connecting with researchers, engineers, and organizations working in organic electronics, flexible devices, or sensor technologies.</p>
     </section>
 
@@ -445,11 +452,11 @@
       <h2>Impact</h2>
       <div class="metrics-grid">
         <div class="metric-card">
-          <span class="metric-number">37</span>
+          <span class="metric-number">38</span>
           <span class="metric-label">Publications</span>
         </div>
         <div class="metric-card">
-          <span class="metric-number">5,296</span>
+          <span class="metric-number">&gt;5,300</span>
           <span class="metric-label">Citations</span>
         </div>
         <div class="metric-card">
@@ -464,7 +471,7 @@
     </section>
 
     <section id="experience" class="section">
-      <h2>Experience</h2>
+      <h2>Professional Experience</h2>
       <div class="timeline">
         <div class="timeline-entry current">
           <div class="timeline-date">Feb 2024 &ndash; Present</div>
@@ -475,33 +482,35 @@
         <div class="timeline-entry">
           <div class="timeline-date">Sep 2021 &ndash; Jan 2024</div>
           <div class="timeline-title">Research Program Manager</div>
-          <div class="timeline-org">Holst Centre / TNO</div>
+          <div class="timeline-org">Holst Centre / TNO &mdash; Hybrid Printed Electronics</div>
           <div class="timeline-location">Eindhoven, The Netherlands</div>
         </div>
         <div class="timeline-entry">
           <div class="timeline-date">Jan 2017 &ndash; Sep 2021</div>
           <div class="timeline-title">Senior Research Scientist</div>
-          <div class="timeline-org">Holst Centre / TNO</div>
+          <div class="timeline-org">Holst Centre / TNO &mdash; Hybrid Printed Electronics</div>
           <div class="timeline-location">Eindhoven, The Netherlands</div>
         </div>
         <div class="timeline-entry">
           <div class="timeline-date">Nov 2014 &ndash; Dec 2016</div>
-          <div class="timeline-title">Project Researcher (&#x7279;&#x4EFB;&#x7814;&#x7A76;&#x54E1;)</div>
-          <div class="timeline-org">The University of Tokyo &mdash; JST ERATO</div>
+          <div class="timeline-title">Project Researcher, JST ERATO</div>
+          <div class="timeline-org">The University of Tokyo &mdash; Dept. of Electrical Engineering</div>
           <div class="timeline-location">Tokyo, Japan</div>
+          <div class="timeline-advisor">Advisor: Prof. Takao Someya</div>
         </div>
         <div class="timeline-entry">
           <div class="timeline-date">Apr 2010 &ndash; Jun 2014</div>
           <div class="timeline-title">Ph.D. Researcher</div>
-          <div class="timeline-org">University of California, Santa Barbara</div>
+          <div class="timeline-org">University of California, Santa Barbara &mdash; Dept. of Chemistry and Biochemistry</div>
           <div class="timeline-location">Santa Barbara, California, USA</div>
+          <div class="timeline-advisor">Advisor: Prof. Thuc-Quyen Nguyen</div>
         </div>
       </div>
     </section>
 
     <section id="publications" class="section">
       <h2>First-Author Highlights</h2>
-      <p class="section-intro">Three first-author highlights from 37 peer-reviewed articles in journals including <em>Nature Materials</em>, <em>Nature Communications</em>, <em>Science Advances</em>, <em>JACS</em>, and <em>Angewandte Chemie</em>.</p>
+      <p class="section-intro">Three first-author highlights from 38 peer-reviewed articles in journals including <em>Nature Materials</em>, <em>Nature Communications</em>, <em>Science Advances</em>, <em>JACS</em>, and <em>Angewandte Chemie</em>.</p>
       <a href="https://scholar.google.com/citations?user=Sfoouv0AAAAJ&hl=en" target="_blank" class="section-link"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="vertical-align: -0.125em;"><path d="m12 3-12 7 4.5 2.625v5.375l7.5 4 7.5-4v-5.375l2-1.167v6.542h2v-7.75zm0 14.834-5.5-2.917v-3.459l5.5 3.209 5.5-3.209v3.459z"/></svg> View all on Google Scholar &rarr;</a>
 
       <div class="pub-card">
@@ -529,8 +538,9 @@
       </div>
 
       <details class="pub-details">
-        <summary>View all 37 publications</summary>
+        <summary>View all 38 publications</summary>
         <ol class="pub-list" reversed>
+          <li>Ananieva, G.; Spallanzani, G.; Zalar, P.* Influence of Textile Morphology on the Electromechanical Behavior of Silicone-Based Strain Sensors. <em>Adv. Eng. Mater.</em> (2026) <em>Accepted</em> <span class="badge badge-corresponding">Corr.</span></li>
           <li>Cotta, F. C. et al.; Zalar, P. Porous PU/PEDOT:PSS electrodes for probing bioelectricity in Oscillatoria sp. Cohorts. <em>Chem. Eng. J.</em> 498 (2024)</li>
           <li>Zalar, P.* et al. Large Area Ballistocardiography Enabled by Printed Piezoelectric Sensor Arrays on Elastomeric Substrates. <em>Adv. Mater. Technol.</em> 9, 2400228 (2024) <span class="badge badge-first">First</span> <span class="badge badge-corresponding">Corr.</span></li>
           <li>Zalar, P.* et al. A Janus Molecule for Screen-Printable Conductive Carbon Ink with Superior Stretchability. <em>Adv. Eng. Mater.</em> 25, 2300706 (2023) <span class="badge badge-first">First</span> <span class="badge badge-corresponding">Corr.</span></li>
@@ -575,7 +585,7 @@
     <section id="patents" class="section">
       <h2>Patents</h2>
       <p class="section-intro">4 granted patents from a portfolio of 14 patent families.</p>
-      <a href="https://patents.google.com/?inventor=%22Peter+Zalar%22" target="_blank" class="section-link"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="vertical-align: -0.125em;"><path d="m12 3-12 7 4.5 2.625v5.375l7.5 4 7.5-4v-5.375l2-1.167v6.542h2v-7.75zm0 14.834-5.5-2.917v-3.459l5.5 3.209 5.5-3.209v3.459z"/></svg> View all on Google Patents &rarr;</a>
+      <a href="https://patents.google.com/?inventor=%22Peter+Zalar%22&sort=new" target="_blank" class="section-link"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="vertical-align: -0.125em;"><path d="m12 3-12 7 4.5 2.625v5.375l7.5 4 7.5-4v-5.375l2-1.167v6.542h2v-7.75zm0 14.834-5.5-2.917v-3.459l5.5 3.209 5.5-3.209v3.459z"/></svg> View all on Google Patents &rarr;</a>
 
       <div class="item-card">
         <a href="https://patents.google.com/patent/EP4292106B1" target="_blank" class="item-card-title">Composite Thermistor Element</a>
@@ -702,7 +712,7 @@
         </div>
         <div class="language-badge">
           <span class="language-name">Japanese</span>
-          <span class="language-level">JLPT N3 &middot; CEFR B1&ndash;B2</span>
+          <span class="language-level">JLPT N3 &middot; CEFR B2</span>
         </div>
         <div class="language-badge">
           <span class="language-name">Dutch</span>
