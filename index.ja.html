@@ -96,6 +96,10 @@
       --badge-invited: #1565c0;
       --badge-first: #6a1b9a;
       --badge-corresponding: #00695c;
+      --badge-panel: #0277bd;
+      --badge-interview: #00838f;
+      --badge-feature: #ad1457;
+      --badge-coverage: #37474f;
       --badge-submitted: #546e7a;
       --space-4: 1rem;
       --space-6: 1.5rem;
@@ -314,6 +318,10 @@
     .badge-pending { background: var(--badge-pending); color: #fff; }
     .badge-invited { background: var(--badge-invited); color: #fff; }
     .badge-submitted { background: var(--badge-submitted); color: #fff; }
+    .badge-panel { background: var(--badge-panel); color: #fff; }
+    .badge-interview { background: var(--badge-interview); color: #fff; }
+    .badge-feature { background: var(--badge-feature); color: #fff; }
+    .badge-coverage { background: var(--badge-coverage); color: #fff; }
 
     /* Item Cards (Patents, Presentations) */
     .item-card {
@@ -408,7 +416,7 @@
         <a href="#experience">経歴</a>
         <a href="#publications">論文</a>
         <a href="#patents">特許</a>
-        <a href="#presentations">発表</a>
+        <a href="#presentations">発表・メディア</a>
         <a href="#education">学歴</a>
       </div>
       <a href="index.html" class="nav-lang">&#x1F1FA;&#x1F1F8;</a>
@@ -576,7 +584,7 @@
         <ol class="pub-list" reversed>
           <li>Wang, L.; Zalar, P.; Bhate, V.; Furukawa, T.; Kodama, H.; Liu, Y.; Zhou, Y.; Hou, C.; Liu, Si.; Matsuhisa, N. Skin-like Tri-Modal Sensors Based on Soft Piezoelectric and Ionic Composites. <em>Adv. Mater. Technol.</em> (2026) <em>Submitted</em> <span class="badge badge-submitted">Submitted</span></li>
           <li>Spallanzani, G. et al.; Zalar, P. Liquid Crystal Elastomer Actuator Matrix for Large Area Applications. (2026) <em>Submitted</em> <span class="badge badge-submitted">Submitted</span></li>
-          <li>Ananieva, G.; Spallanzani, G.; Zalar, P.* Influence of Textile Morphology on the Electromechanical Behavior of Silicone-Based Strain Sensors. <em>Adv. Eng. Mater.</em> (2026) <span class="badge badge-corresponding">Corr.</span></li>
+          <li>Ananieva, G.; Spallanzani, G.; Zalar, P.* Influence of Textile Morphology on the Electromechanical Behavior of Silicone-Based Strain Sensors. <em>Adv. Eng. Mater.</em> (2026)</li>
           <li>Cotta, F. C. et al.; Zalar, P. Porous PU/PEDOT:PSS electrodes for probing bioelectricity in Oscillatoria sp. Cohorts. <em>Chem. Eng. J.</em> 498 (2024)</li>
           <li>Zalar, P.* et al. Large Area Ballistocardiography Enabled by Printed Piezoelectric Sensor Arrays on Elastomeric Substrates. <em>Adv. Mater. Technol.</em> 9, 2400228 (2024) <span class="badge badge-first">First</span> <span class="badge badge-corresponding">Corr.</span></li>
           <li>Zalar, P.* et al. A Janus Molecule for Screen-Printable Conductive Carbon Ink with Superior Stretchability. <em>Adv. Eng. Mater.</em> 25, 2300706 (2023) <span class="badge badge-first">First</span> <span class="badge badge-corresponding">Corr.</span></li>
@@ -649,8 +657,8 @@
     </section>
 
     <section id="presentations" class="section">
-      <h2>発表</h2>
-      <p class="section-intro">国際会議・研究機関での発表32件（うち招待講演24件）。</p>
+      <h2>発表・メディア</h2>
+      <p class="section-intro">国際会議・研究機関での発表32件（うち招待講演24件）；メディア掲載・パブリックエンゲージメント8件。</p>
 
       <details class="pub-details" id="talks-list">
         <summary>全32件の発表を表示</summary>
@@ -689,6 +697,18 @@
           <li>Efficient Electron Injection in OLEDs Utilizing Quinacridone Derivatives. <em>SCUT Workshop</em>, 広州. 2010年10月 <span class="badge badge-invited">Invited</span></li>
         </ol>
       </details>
+
+      <h3 style="margin: var(--space-6) 0 var(--space-4); font-size: 1rem; font-weight: 600; color: var(--text-primary);">メディア・パブリックエンゲージメント</h3>
+      <ol class="pub-list" reversed>
+        <li>招待パネリスト、<em><a href="https://youtu.be/Z87VO5DQK-0" target="_blank" style="color:inherit;">Organic Electronics: Toward Bio- and Energy Applications</a></em> &mdash; iCanX Youth Talks. 2023年8月 <span class="badge badge-panel">Panel</span></li>
+        <li>業界インタビュー、<em><a href="https://archive.ph/nqJWd" target="_blank" style="color:inherit;">Holst Centre: Electroactive Polymers</a></em> &mdash; IDTechEx. 2023年6月 <span class="badge badge-interview">Interview</span></li>
+        <li>特集記事、<em><a href="https://archive.is/O8Bce" target="_blank" style="color:inherit;">Progress in Elastomeric Large-Area Sensing Surfaces</a></em> &mdash; Organic &amp; Printed Electronics Journal、第41号. 2022年10月 <span class="badge badge-feature">Feature</span></li>
+        <li>メディア掲載、<em><a href="https://archive.is/4JZ4U" target="_blank" style="color:inherit;">Smart Sensor Mat for Heart Rate, Breathing Rate, and Posture Detection</a></em> &mdash; Organic &amp; Printed Electronics Journal. 2021年10月 <span class="badge badge-coverage">Coverage</span></li>
+        <li>メディア掲載、<em><a href="https://archive.is/JBOfM" target="_blank" style="color:inherit;">TNO at Holst Centre Develops Smart Sensor Mat</a></em> &mdash; Printed Electronics Now. 2021年10月 <span class="badge badge-coverage">Coverage</span></li>
+        <li>プレスリリース、<em><a href="https://archive.is/FGmla" target="_blank" style="color:inherit;">TNO at Holst Centre Develops Smart Sensor Mat</a></em> &mdash; Holst Centre. 2021年10月 <span class="badge badge-coverage">Coverage</span></li>
+        <li>ビデオインタビュー、<em><a href="https://youtu.be/ihvWWRRlBiU" target="_blank" style="color:inherit;">Peter Zalar &ndash; Get to Know TNO</a></em> &mdash; TNO YouTubeチャンネル. 2018年1月 <span class="badge badge-interview">Interview</span></li>
+        <li>プロフィール特集、<em><a href="https://archive.ph/WqfYI" target="_blank" style="color:inherit;">Meet Our Talents &ndash; Peter Zalar</a></em> &mdash; Brainport Eindhoven. 2017年2月 <span class="badge badge-feature">Feature</span></li>
+      </ol>
     </section>
 
     <section id="education" class="section">
