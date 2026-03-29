@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="ピーター・ザーラー（Ph.D.）- AppleのシニアOLEDデバイスエンジニア。17年の経験、論文40本、特許14件、h-index 25、被引用数>5,300。有機エレクトロニクス、印刷センサー、フレキシブルエレクトロニクスの専門家。" />
+  <meta name="description" content="ピーター・ザーラー（Ph.D.）- AppleのシニアOLEDデバイスエンジニア。17年の経験、論文40本、特許14件、h-index 25、被引用数5,345+。有機エレクトロニクス、印刷センサー、フレキシブルエレクトロニクスの専門家。" />
   <meta name="keywords" content="ピーター・ザーラー, Peter Zalar, OLED, 有機エレクトロニクス, 印刷センサー, フレキシブルエレクトロニクス, 材料科学, Apple, UCSB, 東京大学, ホルストセンター, TNO, ウェアラブルデバイス, 薄膜デバイス, 有機光電子, ディスプレイ技術" />
   <title>ピーター・ザーラー - シニアOLEDデバイスエンジニア</title>
   <link rel="icon" href="favicon.ico" type="image/x-icon">
@@ -112,6 +112,7 @@
     }
 
     html { scroll-behavior: smooth; scroll-padding-top: 4rem; }
+    a:focus-visible, summary:focus-visible, button:focus-visible { outline: 2px solid var(--accent-primary); outline-offset: 2px; border-radius: 3px; }
 
     body {
       margin: 0;
@@ -145,6 +146,7 @@
       white-space: nowrap; transition: color 0.2s ease, background 0.2s ease;
     }
     .sticky-nav .nav-links a:hover { color: var(--text-primary); background: var(--bg-tertiary); }
+    .sticky-nav .nav-links a.active { color: var(--text-primary); }
     .sticky-nav .nav-cta {
       display: inline-flex; align-items: center; gap: 0.375rem;
       background: var(--accent-primary); color: #fff; text-decoration: none;
@@ -178,9 +180,10 @@
     }
 
     h1 { font-size: 2.441rem; font-weight: 700; letter-spacing: -0.025em; line-height: 1.25; margin-top: 0; color: var(--text-primary); }
-    .subtitle, .location { color: var(--text-tertiary); margin-top: 0.375rem; font-size: 0.875rem; letter-spacing: 0.025em; }
+    .subtitle { color: var(--text-secondary); margin-top: 0.375rem; font-size: 0.9375rem; font-weight: 500; letter-spacing: 0.025em; }
+    .location { color: var(--text-tertiary); margin-top: 0.375rem; font-size: 0.875rem; letter-spacing: 0.025em; }
 
-    .links { display: flex; flex-direction: column; align-items: center; gap: 0.5rem; margin: var(--space-4) 0 0; }
+    .links { display: flex; flex-direction: row; flex-wrap: wrap; justify-content: center; gap: 0.5rem; margin: var(--space-4) 0 0; }
     .links a {
       display: inline-flex; align-items: center; gap: 0.5rem; text-decoration: none;
       color: var(--text-primary); font-size: 0.875rem; background: var(--bg-secondary);
@@ -200,7 +203,7 @@
     }
     .section:hover { border-color: var(--border-medium); }
     .section-intro { color: var(--text-secondary); line-height: 1.8; margin: 0 0 var(--space-6); }
-    .about p { margin: 1.25rem 0; line-height: 1.8; text-align: justify; }
+    .about p { margin: 1.25rem 0; line-height: 1.8; text-align: left; }
 
     ul { list-style: none; padding: 0; margin-top: var(--space-6); }
     ul li {
@@ -239,20 +242,22 @@
     .timeline-org { font-size: 0.9375rem; color: var(--accent-primary); margin-bottom: 0.125rem; }
     .timeline-location { font-size: 0.8125rem; color: var(--text-tertiary); }
     .timeline-advisor { font-size: 0.8125rem; color: var(--text-secondary); font-style: italic; }
+    .timeline-teaser { font-size: 0.8125rem; color: var(--text-tertiary); margin-top: 0.25rem; font-style: italic; }
 
     /* Expertise Grid */
     .expertise-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: var(--space-6); }
     .expertise-category { margin-top: 0; }
     .expertise-category h3 { color: var(--text-primary); font-size: 1.125rem; font-weight: 600; margin-bottom: 0.875rem; padding-left: 0.875rem; border-left: 3px solid var(--accent-primary); }
-    .expertise-category ul { margin-top: 0; }
+    .expertise-category ul { list-style: none; padding: 0; margin-top: 0; }
     .expertise-category ul li {
-      padding: 0.625rem 1rem; margin-bottom: 0.5rem; background: var(--bg-tertiary);
-      border-left: 2px solid var(--accent-primary); border-radius: 4px;
-      font-size: 0.875rem; line-height: 1.4; transition: all 0.3s ease;
-      position: relative; padding-left: 1.75rem;
+      padding: 0.3rem 0 0.3rem 0.875rem;
+      border-left: 2px solid var(--border-accent);
+      font-size: 0.875rem; color: var(--text-secondary);
+      line-height: 1.4; margin-bottom: 0.25rem;
+      background: none; position: static; transition: none;
     }
-    .expertise-category ul li::before { content: "\25B8"; color: var(--accent-primary); position: absolute; left: 0.625rem; font-weight: bold; font-size: 0.75rem; }
-    .expertise-category ul li:hover { background: var(--bg-secondary); border-left-width: 3px; padding-left: 1.875rem; }
+    .expertise-category ul li::before { content: none; }
+    .expertise-category ul li:hover { background: none; border-left-width: 2px; padding-left: 0.875rem; }
 
     /* Education */
     .education-entry {
@@ -283,21 +288,34 @@
     .pub-badges { display: flex; gap: 0.375rem; margin-top: 0.5rem; flex-wrap: wrap; }
 
     /* Expandable Publication List */
+    .collapse-link { display: block; font-size: 0.8125rem; color: var(--accent-primary); text-decoration: none; margin-top: 0.75rem; }
+    .collapse-link:hover { color: var(--accent-hover); }
     .pub-details { margin-top: var(--space-6); }
     .pub-details summary {
       cursor: pointer; color: var(--accent-primary); font-size: 0.875rem;
-      font-weight: 500; padding: 0.5rem 0; transition: color 0.2s ease; list-style: none;
+      font-weight: 500; padding: 0.25rem 0; transition: color 0.2s ease; list-style: none;
     }
     .pub-details summary::-webkit-details-marker { display: none; }
     .pub-details summary::before { content: "\25B6\00a0"; font-size: 0.625rem; vertical-align: middle; }
     .pub-details[open] summary::before { content: "\25BC\00a0"; }
     .pub-details summary:hover { color: var(--accent-hover); }
+
+    .timeline-entry .pub-details { margin-top: 0.25rem; }
+    .timeline-entry .pub-details[open] { margin-bottom: -0.75rem; }
+    .pub-details ul { list-style: disc; padding-left: 1.25rem; margin-top: 0; }
+    .pub-details ul li {
+      font-size: 0.875rem; color: var(--text-secondary); line-height: 1.35;
+      padding: 0; background: none; border-left: none; border-radius: 0;
+      position: static; padding-left: 0;
+    }
+    .pub-details ul li::before { content: none; }
+    .pub-details ul li:hover { background: none; border-left-width: 0; padding-left: 0; }
     ol.pub-list {
       list-style: decimal; padding-left: 1.75rem; margin-top: 0.75rem;
     }
     ol.pub-list li {
       padding: 0.375rem 0; margin-bottom: 0; background: none; border-left: none;
-      border-radius: 0; font-size: 0.8125rem; line-height: 1.5;
+      border-radius: 0; font-size: 0.875rem; line-height: 1.5;
       color: var(--text-secondary); position: static; padding-left: 0.25rem;
     }
     ol.pub-list li::before { content: none; }
@@ -322,6 +340,17 @@
     .badge-interview { background: var(--badge-interview); color: #fff; }
     .badge-feature { background: var(--badge-feature); color: #fff; }
     .badge-coverage { background: var(--badge-coverage); color: #fff; }
+    .badge-present { background: var(--accent-primary); color: #fff; }
+
+    /* Timeline description bullets */
+    .timeline-desc { margin-top: 0.625rem; }
+    .timeline-entry .timeline-desc li {
+      padding: 0.25rem 0 0.25rem 1.375rem; margin-bottom: 0; background: none;
+      border-left: none; border-radius: 0; font-size: 0.875rem; line-height: 1.5;
+      color: var(--text-secondary); position: relative;
+    }
+    .timeline-entry .timeline-desc li::before { left: 0; color: var(--text-tertiary); font-size: 0.6875rem; }
+    .timeline-entry .timeline-desc li:hover { background: none; border-left-width: 0; padding-left: 1.375rem; }
 
     /* Item Cards (Patents, Presentations) */
     .item-card {
@@ -389,17 +418,15 @@
       .section { padding: 1.5rem; }
       .metrics-grid { grid-template-columns: repeat(2, 1fr); }
       .expertise-grid { grid-template-columns: 1fr; gap: 1.5rem; }
-      .expertise-category ul li { font-size: 0.875rem; padding: 0.625rem 1rem 0.625rem 1.625rem; }
-      .expertise-category ul li::before { left: 0.5rem; }
-      .expertise-category ul li:hover { padding-left: 1.75rem; }
+
       ul li { font-size: 1rem; padding: 0.875rem 1.25rem 0.875rem 2.25rem; }
       ul li::before { left: 0.875rem; }
       ul li:hover { padding-left: 2.5rem; }
       .language-row { gap: 0.5rem; }
       .language-badge { min-width: 100px; padding: 0.625rem 1rem; }
       .sticky-nav .nav-inner { flex-wrap: wrap; height: auto; padding: 0.375rem 0; }
-      .sticky-nav .nav-links { flex-wrap: wrap; justify-content: center; gap: 0.125rem; }
-      .sticky-nav .nav-links a { font-size: 0.75rem; padding: 0.3rem 0.5rem; }
+      .sticky-nav .nav-links { flex-wrap: nowrap; overflow-x: auto; -webkit-overflow-scrolling: touch; justify-content: flex-start; gap: 0.125rem; }
+      .sticky-nav .nav-links a { font-size: 0.8125rem; padding: 0.625rem 0.75rem; white-space: nowrap; min-height: 44px; display: inline-flex; align-items: center; }
       .sticky-nav .nav-cta { font-size: 0.75rem; padding: 0.3rem 0.625rem; }
     }
     @media (min-width: 641px) and (max-width: 1024px) {
@@ -417,7 +444,8 @@
         <a href="#publications">論文</a>
         <a href="#patents">特許</a>
         <a href="#presentations">発表・メディア</a>
-        <a href="#education">学歴</a>
+        <a href="#expertise">専門分野</a>
+        <a href="#languages">言語</a>
       </div>
       <a href="index.html" class="nav-lang">&#x1F1FA;&#x1F1F8;</a>
       <a href="https://www.linkedin.com/in/peterzalar/" target="_blank" class="nav-cta">
@@ -431,7 +459,7 @@
 
     <section id="hero">
       <div class="hero-row">
-        <img src="peter.jpeg" alt="ピーター・ザーラー" class="profile-photo" />
+        <img src="peter.jpeg" alt="ピーター・ザーラー" class="profile-photo" width="180" height="180" />
         <div class="hero-content">
           <h1>ピーター・ザーラー</h1>
           <div class="subtitle">Apple シニアOLEDデバイスエンジニア</div>
@@ -455,37 +483,102 @@
 
     <section id="about" class="section about">
       <h2>自己紹介</h2>
-      <p>私のキャリアは、材料科学・化学・物理学・電気工学が交わる分野で、17年間にわたり3つの大陸に広がってきました。現在はAppleでシニア有機ELデバイスエンジニアとして、次世代ディスプレイ向けの有機ELデバイスの電気モデリング・特性評価・故障解析に取り組んでいます。</p>
+      <p>私のキャリアは、材料科学・化学・物理学・電気工学が交わる分野で、17年間にわたり3つの大陸に広がってきました。UCSBでの有機半導体の博士研究から始まり、東京大学での生体医療向け超フレキシブルデバイス開発、ホルストセンター（TNO）での大面積印刷センサープログラムのマネジメントを経て、現在はAppleでOLEDデバイスエンジニアリングに取り組んでいます。</p>
       <p>Apple以前は、オランダのホルストセンター（TNO）で7年間、大面積印刷センサーの研究プログラムを担当し、大学や企業との国際的な共同研究を進めました。さらにその前は、東京大学のJST ERATOプログラムで、医療応用に向けた超薄型有機光電子デバイスの開発に携わる機会を得ました。</p>
       <p>研究活動に加えて、この年月は日本との継続的なつながりをもたらしてくれました。東京大学での研究期間から始まり、その後も日本の産業界や大学との共同プロジェクトを通じて、関係を続けてきました。有機エレクトロニクス、フレキシブルデバイス、センサー技術に関わる研究者・エンジニア・組織との交流を歓迎しています。</p>
     </section>
 
-    <section id="languages" class="section">
-      <h2>言語能力</h2>
-      <div class="language-row">
-        <div class="language-badge">
-          <span class="language-name">英語</span>
-          <span class="language-level">母語</span>
+    <section id="experience" class="section">
+      <h2>経歴</h2>
+      <div class="timeline">
+        <div class="timeline-entry current">
+          <div class="timeline-date">2024年2月 &ndash; 現在 &nbsp;<span class="badge badge-present">現職</span></div>
+          <div class="timeline-title">シニアOLEDデバイスエンジニア</div>
+          <div class="timeline-org">Apple &mdash; Hardware Technologies, Panel Tech OLED</div>
+          <div class="timeline-location">アメリカ・カリフォルニア州クパチーノ</div>
+          <div class="timeline-teaser">次世代ディスプレイ向けOLEDの電気的モデリングと故障解析。</div>
+          <details class="pub-details">
+            <summary>担当業務</summary>
+            <ul>
+              <li>次世代ディスプレイ製品向けOLEDの電気的モデリング、デバイス特性評価、およびシミュレーション。</li>
+              <li>熱蒸着・スパッタリング・CVDを用いたOLED薄膜スタックのプロセス開発；プロセスエンジニアリングチームと連携したプロセス評価および最適化。</li>
+              <li>デバイス構造および材料選定に反映させるための故障解析とリスク評価を実施。</li>
+              <li>新規薄膜技術の初期共同開発において材料サプライヤーと連携。</li>
+            </ul>
+          </details>
         </div>
-        <div class="language-badge">
-          <span class="language-name">日本語</span>
-          <span class="language-level">JLPT N3 &middot; CEFR B2</span>
+        <div class="timeline-entry">
+          <div class="timeline-date">2021年9月 &ndash; 2024年1月</div>
+          <div class="timeline-title">リサーチプログラムマネージャー</div>
+          <div class="timeline-org">Holst Centre / TNO &mdash; Hybrid Printed Electronics</div>
+          <div class="timeline-location">オランダ・アイントホーフェン</div>
+          <div class="timeline-teaser">8名のR&amp;Dプログラムチームの戦略策定と日常業務管理。</div>
+          <details class="pub-details">
+            <summary>担当業務</summary>
+            <ul>
+              <li>グループの研究戦略を策定し、8名チームの日常業務を管理；複数の並行プログラムに対するロードマップ・マイルストーン・成果物を定義。</li>
+              <li>化学・電子・自動車産業にまたがる部門横断チームおよび外部技術パートナーを調整；ベンダー管理、予算・スケジュール監督、二国間およびEU資金プログラムにおける問題対応を担当。</li>
+              <li>各開発段階でプロセス準備状況と仕様適合性を確認しながら、研究室概念から産業プロトタイプへの技術移転を推進。</li>
+              <li>プロジェクト提案書の作成・リード獲得・潜在クライアントおよび経営層への提案を実施；二国間およびEU資金プログラムを通じてグループのR&D資金を獲得。</li>
+            </ul>
+          </details>
         </div>
-        <div class="language-badge">
-          <span class="language-name">オランダ語</span>
-          <span class="language-level">CEFR B1</span>
+        <div class="timeline-entry">
+          <div class="timeline-date">2017年1月 &ndash; 2021年9月</div>
+          <div class="timeline-title">シニアリサーチサイエンティスト</div>
+          <div class="timeline-org">Holst Centre / TNO &mdash; Hybrid Printed Electronics</div>
+          <div class="timeline-location">オランダ・アイントホーフェン</div>
+          <div class="timeline-teaser">スクリーン印刷可能センサー開発のプロジェクトリーダー。</div>
+          <details class="pub-details">
+            <summary>担当業務</summary>
+            <ul>
+              <li>スクリーン印刷可能センサー開発のプロジェクトリーダーとして、日本・欧州の社内チームおよび外部産業パートナーにまたがるワークパッケージを調整。</li>
+              <li>実験計画・DOEプロトコル・信頼性試験手順を策定；プロセス再現性・歩留まり・ベンチマーク結果の継続的改善を推進。</li>
+              <li>修士・博士・技術スタッフの指導監督；技術報告書および学術論文の執筆。</li>
+            </ul>
+          </details>
         </div>
-        <div class="language-badge">
-          <span class="language-name">クロアチア語</span>
-          <span class="language-level">CEFR A2</span>
+        <div class="timeline-entry">
+          <div class="timeline-date">2014年11月 &ndash; 2016年12月</div>
+          <div class="timeline-title">特任研究員、JST ERATO</div>
+          <div class="timeline-org">東京大学 &mdash; 電気系工学専攻</div>
+          <div class="timeline-location">日本・東京</div>
+          <div class="timeline-advisor">指導教員：染谷 隆夫 教授</div>
+          <div class="timeline-teaser">生体医療応用向け超フレキシブル有機光電子デバイスの開発。</div>
+          <details class="pub-details">
+            <summary>担当業務</summary>
+            <ul>
+              <li>JST ERATOバイオハーモナイズドエレクトロニクスプログラムにて生体医療応用向け多層光電子デバイスを開発；ポスドク1名・博士課程学生3名・修士課程学生8名を指導。</li>
+              <li>マイクロメートル厚基板上の超フレキシブル有機光電子デバイスを開発し、有機半導体と金属酸化物電荷輸送層を集積；研究成果は<em>Science Advances</em>および<em>Advanced Electronic Materials</em>に掲載。</li>
+            </ul>
+          </details>
         </div>
-        <div class="language-badge">
-          <span class="language-name">イタリア語</span>
-          <span class="language-level">CEFR A2</span>
+        <div class="timeline-entry">
+          <div class="timeline-date">2010年4月 &ndash; 2014年6月</div>
+          <div class="timeline-title">博士課程研究員</div>
+          <div class="timeline-org">カリフォルニア大学サンタバーバラ校 &mdash; 化学・生化学科</div>
+          <div class="timeline-location">アメリカ・カリフォルニア州サンタバーバラ</div>
+          <div class="timeline-advisor">指導教員：Thuc-Quyen Nguyen 教授</div>
+          <div class="timeline-teaser">有機半導体デバイスの薄膜作製とプロセス最適化の研究。</div>
+          <details class="pub-details">
+            <summary>担当業務</summary>
+            <ul>
+              <li>OLED・太陽電池・電界効果トランジスタを含む有機半導体デバイスの薄膜作製プロセスの最適化を研究。</li>
+              <li>有機トランジスタ開発において日本の化学企業パートナーと共同研究；フローニンゲン大学（オランダ）に客員研究員として滞在。</li>
+            </ul>
+          </details>
         </div>
-        <div class="language-badge">
-          <span class="language-name">スペイン語</span>
-          <span class="language-level">CEFR A2</span>
+      </div>
+    </section>
+
+    <section id="education" class="section">
+      <h2>学歴</h2>
+      <div class="education-entry">
+        <div class="education-degree">化学博士号（Ph.D.）</div>
+        <div class="education-school">カリフォルニア大学サンタバーバラ校 &middot; 2014</div>
+        <div class="education-detail">
+          博士論文: <em><a href="https://escholarship.org/uc/item/6kf3q8q3" target="_blank" style="color:inherit;">Tuning the Optical, Charge Injection, and Charge Transport Properties of Organic Electronic Devices</a></em><br>
+          指導教員: Thuc-Quyen Nguyen 教授
         </div>
       </div>
     </section>
@@ -498,7 +591,7 @@
           <span class="metric-label">論文</span>
         </div>
         <div class="metric-card">
-          <span class="metric-number">&gt;5,300</span>
+          <span class="metric-number">5,345+</span>
           <span class="metric-label">被引用数</span>
         </div>
         <div class="metric-card">
@@ -512,47 +605,9 @@
       </div>
     </section>
 
-    <section id="experience" class="section">
-      <h2>経歴</h2>
-      <div class="timeline">
-        <div class="timeline-entry current">
-          <div class="timeline-date">2024年2月 &ndash; 現在</div>
-          <div class="timeline-title">シニアOLEDデバイスエンジニア</div>
-          <div class="timeline-org">Apple &mdash; Hardware Technologies, Panel Tech OLED</div>
-          <div class="timeline-location">アメリカ・カリフォルニア州クパチーノ</div>
-        </div>
-        <div class="timeline-entry">
-          <div class="timeline-date">2021年9月 &ndash; 2024年1月</div>
-          <div class="timeline-title">リサーチプログラムマネージャー</div>
-          <div class="timeline-org">Holst Centre / TNO &mdash; Hybrid Printed Electronics</div>
-          <div class="timeline-location">オランダ・アイントホーフェン</div>
-        </div>
-        <div class="timeline-entry">
-          <div class="timeline-date">2017年1月 &ndash; 2021年9月</div>
-          <div class="timeline-title">シニアリサーチサイエンティスト</div>
-          <div class="timeline-org">Holst Centre / TNO &mdash; Hybrid Printed Electronics</div>
-          <div class="timeline-location">オランダ・アイントホーフェン</div>
-        </div>
-        <div class="timeline-entry">
-          <div class="timeline-date">2014年11月 &ndash; 2016年12月</div>
-          <div class="timeline-title">特任研究員、JST ERATO</div>
-          <div class="timeline-org">東京大学 &mdash; 電気系工学専攻</div>
-          <div class="timeline-location">日本・東京</div>
-          <div class="timeline-advisor">指導教員：染谷 隆夫 教授</div>
-        </div>
-        <div class="timeline-entry">
-          <div class="timeline-date">2010年4月 &ndash; 2014年6月</div>
-          <div class="timeline-title">博士課程研究員</div>
-          <div class="timeline-org">カリフォルニア大学サンタバーバラ校 &mdash; 化学・生化学科</div>
-          <div class="timeline-location">アメリカ・カリフォルニア州サンタバーバラ</div>
-          <div class="timeline-advisor">指導教員：Thuc-Quyen Nguyen 教授</div>
-        </div>
-      </div>
-    </section>
-
     <section id="publications" class="section">
       <h2>筆頭著者論文ハイライト</h2>
-      <p class="section-intro"><em>Nature Materials</em>、<em>Nature Communications</em>、<em>Science Advances</em>、<em>JACS</em>、<em>Angewandte Chemie</em>などの学術誌に掲載された40本の論文（39本出版済、1本審査中）の中から、筆頭著者論文3本を厳選。</p>
+      <p class="section-intro"><em>Nature Materials</em>、<em>Advanced Materials</em>、<em>Nature Communications</em>、<em>Angewandte Chemie</em>、<em>JACS</em>、<em>Science Advances</em>などの学術誌に掲載された40本の論文（39本出版済、1本審査中）の中から、筆頭著者論文3本を厳選。</p>
       <a href="https://scholar.google.com/citations?user=Sfoouv0AAAAJ&hl=ja" target="_blank" class="section-link"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="vertical-align: -0.125em;"><path d="m12 3-12 7 4.5 2.625v5.375l7.5 4 7.5-4v-5.375l2-1.167v6.542h2v-7.75zm0 14.834-5.5-2.917v-3.459l5.5 3.209 5.5-3.209v3.459z"/></svg> Google Scholarで全論文を見る &rarr;</a>
 
       <div class="pub-card">
@@ -623,6 +678,7 @@
           <li>Lin, C.-Y. et al.; Zalar, P. Effect of Thermal Annealing on Polymer LEDs with Cationic Conjugated Polyelectrolyte Layers. <em>J. Phys. Chem. C</em> 114, 15786&ndash;15790 (2010)</li>
           <li>Walker, B. et al.; Zalar, P. Nanoscale Phase Separation and High Photovoltaic Efficiency in Small-Molecule BHJ Solar Cells. <em>Adv. Funct. Mater.</em> 19, 3063&ndash;3069 (2009) <span class="badge badge-cover">Cover</span></li>
         </ol>
+        <a class="collapse-link" href="#publications">&#x25B2; 折りたたむ</a>
       </details>
     </section>
 
@@ -696,6 +752,7 @@
           <li>Efficient Electron Injection in OLEDs Utilizing Quinacridone Derivatives. <em>IWAMSN</em>, ハノイ. 2010年11月</li>
           <li>Efficient Electron Injection in OLEDs Utilizing Quinacridone Derivatives. <em>SCUT Workshop</em>, 広州. 2010年10月 <span class="badge badge-invited">Invited</span></li>
         </ol>
+        <a class="collapse-link" href="#presentations">&#x25B2; 折りたたむ</a>
       </details>
 
       <details class="pub-details">
@@ -711,18 +768,6 @@
           <li>プロフィール特集、<em><a href="https://archive.ph/WqfYI" target="_blank" style="color:inherit;">Meet Our Talents &ndash; Peter Zalar</a></em> &mdash; Brainport Eindhoven. 2017年2月 <span class="badge badge-feature">Feature</span></li>
         </ol>
       </details>
-    </section>
-
-    <section id="education" class="section">
-      <h2>学歴</h2>
-      <div class="education-entry">
-        <div class="education-degree">化学博士号（Ph.D.）</div>
-        <div class="education-school">カリフォルニア大学サンタバーバラ校 &middot; 2014</div>
-        <div class="education-detail">
-          博士論文: <em><a href="https://escholarship.org/uc/item/6kf3q8q3" target="_blank" style="color:inherit;">Tuning the Optical, Charge Injection, and Charge Transport Properties of Organic Electronic Devices</a></em><br>
-          指導教員: Thuc-Quyen Nguyen 教授
-        </div>
-      </div>
     </section>
 
     <section id="expertise" class="section">
@@ -761,6 +806,36 @@
       </div>
     </section>
 
+    <section id="languages" class="section">
+      <h2>言語能力</h2>
+      <div class="language-row">
+        <div class="language-badge">
+          <span class="language-name">英語</span>
+          <span class="language-level">母語</span>
+        </div>
+        <div class="language-badge">
+          <span class="language-name">日本語</span>
+          <span class="language-level">JLPT N3 &middot; CEFR B2</span>
+        </div>
+        <div class="language-badge">
+          <span class="language-name">オランダ語</span>
+          <span class="language-level">CEFR B1</span>
+        </div>
+        <div class="language-badge">
+          <span class="language-name">クロアチア語</span>
+          <span class="language-level">CEFR A2</span>
+        </div>
+        <div class="language-badge">
+          <span class="language-name">イタリア語</span>
+          <span class="language-level">CEFR A2</span>
+        </div>
+        <div class="language-badge">
+          <span class="language-name">スペイン語</span>
+          <span class="language-level">CEFR A2</span>
+        </div>
+      </div>
+    </section>
+
   </div>
 
   <footer>
@@ -770,9 +845,20 @@
         LinkedInでつながる
       </a>
       <p>&copy; 2026 ピーター・ザーラー</p>
-      <p>最終更新: 2026年2月</p>
+      <p>最終更新: 2026年3月</p>
     </div>
   </footer>
 
+  <script>
+    const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
+    const sections = [...navLinks].map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean);
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        const link = document.querySelector(`.nav-links a[href="#${entry.target.id}"]`);
+        if (link) link.classList.toggle('active', entry.isIntersecting);
+      });
+    }, { rootMargin: '-20% 0px -70% 0px' });
+    sections.forEach(s => observer.observe(s));
+  </script>
 </body>
 </html>
