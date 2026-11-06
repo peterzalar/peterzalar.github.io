@@ -1,0 +1,30 @@
+# Peter Zalar
+
+> Peter Zalar, Ph.D., is a Senior OLED Device Engineer at Apple (Cupertino, California) with 17 years of experience in organic and printed electronics. He has 41 publications, 14 patent families, an h-index of 25 and 5,537+ citations (Google Scholar). Research areas: organic electronics, OLEDs, printed and flexible sensors, wearable devices, thin-film devices.
+
+## Background
+- Ph.D. research on organic semiconductors at UC Santa Barbara
+- University of Tokyo: ultraflexible organic optoelectronics for biomedical applications (JST ERATO)
+- Holst Centre / TNO (Netherlands), seven years: managed large-area printed sensor research programs
+- Apple: OLED device engineering
+- Languages: English (native), Japanese (JLPT N2), Dutch, Croatian, Italian, Spanish
+
+## Main pages
+- [Home (English)](https://www.peterzalar.com/): experience, publications with DOI links, patents, talks and media, education
+- [Home (Japanese)](https://www.peterzalar.com/index.ja.html): the same content in Japanese
+
+## Profiles and records
+- [Google Scholar](https://scholar.google.com/citations?user=Sfoouv0AAAAJ&hl=en): publication list and citation metrics
+- [Google Patents](https://patents.google.com/?inventor=%22Peter+Zalar%22&sort=new): patents
+- [LinkedIn](https://www.linkedin.com/in/peterzalar/)
+
+## Selected publications (DOI)
+- Skin-like Tri-Modal Sensors Based on Soft Piezoelectric and Ionic Composites, Adv. Mater. Technol. 2026: https://doi.org/10.1002/admt.202502649
+- Liquid Crystal Elastomer Actuator Matrix for Large Area Applications, Adv. Mater. Technol. 2026: https://doi.org/10.1002/admt.71317
+- Large-Area Ballistocardiography Enabled by Printed Piezoelectric Sensor Arrays on Elastomeric Substrates, Adv. Mater. Technol. 2024: https://doi.org/10.1002/admt.202400228
+- Printable Elastic Conductors by In Situ Formation of Silver Nanoparticles from Silver Flakes, Nat. Mater. 2017: https://doi.org/10.1038/nmat4904
+- A Monolithically Processed Rectifying Pixel for High-Resolution Organic Imagers, Adv. Electron. Mater. 2018: https://doi.org/10.1002/aelm.201700601
+- Increased Mobility Induced by Addition of a Lewis Acid to a Lewis Basic Conjugated Polymer, Adv. Mater. 2014: https://doi.org/10.1002/adma.201303357
+
+## Optional
+- The full publication list (40 with DOIs) is also available as structured data (schema.org ItemList) in each page's JSON-LD.
