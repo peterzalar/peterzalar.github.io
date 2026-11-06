@@ -16,6 +16,7 @@
 ## Profiles and records
 - [Google Scholar](https://scholar.google.com/citations?user=Sfoouv0AAAAJ&hl=en): publication list and citation metrics
 - [Google Patents](https://patents.google.com/?inventor=%22Peter+Zalar%22&sort=new): patents
+- [ORCID](https://orcid.org/0000-0002-7719-0979)
 - [LinkedIn](https://www.linkedin.com/in/peterzalar/)
 
 ## Selected publications (DOI)
