@@ -1,6 +1,6 @@
 # Peter Zalar
 
-> Peter Zalar, Ph.D., is a Senior OLED Device Engineer at Apple (Cupertino, California) with 17 years of experience in organic and printed electronics. He has 41 publications, 14 patent families, an h-index of 25 and 5,537+ citations (Google Scholar). Research areas: organic electronics, OLEDs, printed and flexible sensors, wearable devices, thin-film devices.
+> Peter Zalar, Ph.D., is a Senior OLED Device Engineer at Apple (Cupertino, California) with 17 years of experience in organic and printed electronics. He has 41 publications, 14 patent families, an h-index of 25 and 5,582+ citations (Google Scholar). Research areas: organic electronics, OLEDs, printed and flexible sensors, wearable devices, thin-film devices.
 
 ## Background
 - Ph.D. research on organic semiconductors at UC Santa Barbara
